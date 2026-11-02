@@ -1,6 +1,6 @@
 # Dependency Injection in Swift: A Practical Guide to Constructor Injection
 
-*Build a testable Movie Explorer app without a dependency injection framework.*  
+*Part 1 — Constructor injection, explained through a two-screen SwiftUI app.*  
 **Reading time: ~5 minutes**
 
 ## It works. Until you try to test it.
@@ -8,6 +8,8 @@
 ![MovieExplorer — Popular Movies and Movie Details](images/movie-explorer-screens.png)
 
 *MovieExplorer: Popular Movies and Movie Details, powered by TMDB.*
+
+**[Explore the complete MovieExplorer source code on GitHub](https://github.com/premalmistry/MovieExplorer).**
 
 Imagine a SwiftUI app with two screens: **Popular Movies** and **Movie Details**. Both fetch data from TMDB. The first implementation is tempting:
 
@@ -220,7 +222,7 @@ flowchart TD
 
 ![Dependency injection graph — app, services, view models, and tests](images/dependency-graph.png)
 
-*Production uses TMDB; tests supply a mock through the same initializer. The Mermaid source above is editable; the PNG below it is ready for publishing.*
+*Production uses TMDB; tests supply a mock through the same initializer. The Mermaid source is editable; the PNG can be used on publishing platforms that do not render Mermaid.*
 
 ## Do we need a DI container?
 
@@ -239,6 +241,8 @@ A few rules worth keeping:
 Constructor injection is a small change with an important consequence: **objects describe what they need; callers decide what to provide.**
 
 Our Movie Explorer now has explicit dependencies, replaceable services, and unit tests that don't depend on the network—without a DI framework.
+
+**[Explore the full implementation, including unit tests, on GitHub](https://github.com/premalmistry/MovieExplorer).**
 
 **Coming next:** Part 2 explores setter injection—what happens when a dependency arrives *after* an object is created? In a later tutorial, we’ll build a small DI container and discuss when it’s worth using.
 
