@@ -1,8 +1,10 @@
 # Movie Explorer
 
-A two-screen SwiftUI sample for [Dependency Injection in Swift — Part 1: Constructor Injection](docs/dependency-injection-in-swift-part-1.md).
+A two-screen SwiftUI sample for [Dependency Injection in Swift: A Practical Guide to Constructor Injection](docs/movieexplorer-article/dependency-injection-in-swift-part-1.md).
 
 The list shows popular movies. The detail screen shows the poster, title, overview, and release date. There is no search, paging, or cache. The project exists to show a composition root.
+
+![Movie Explorer list and detail screens](docs/movieexplorer-article/images/movie-explorer-screens.png)
 
 ## Token
 
